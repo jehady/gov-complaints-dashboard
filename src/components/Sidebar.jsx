@@ -11,7 +11,7 @@ export default function Sidebar() {
       <nav>
         <NavLink to="/" end>الرئيسية</NavLink>
         <NavLink to="/complaints">الشكاوى</NavLink>
-        <NavLink to="/notifications">الإشعارات</NavLink>
+        {/* <NavLink to="/notifications">الإشعارات</NavLink> */}
       {isAdmin() &&   <NavLink to="/Department">الاقسام</NavLink> }
         {isAdmin() &&  <NavLink to="/employee">الموظفون</NavLink> }
 
