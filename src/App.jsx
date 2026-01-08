@@ -7,7 +7,7 @@ import HomePage from './pages/HomePage'
 import ComplaintsPage from './pages/ComplaintsPage'
 import ComplaintDetailsPage from './pages/ComplaintDetailsPage'
 import AdminPage from './pages/AdminPage'
-import NotificationsPage from './pages/NotificationsPage'
+// import NotificationsPage from './pages/NotificationsPage'
 import LoginPage from './pages/LoginPage'
 import './layout/Layout.css'
 import DepartmentPage from './pages/DepartmentPage'
@@ -35,7 +35,8 @@ export default function App() {
               <Route index element={<HomePage />} />
               <Route path="complaints" element={<ComplaintsPage />} />
               <Route path="complaints/:id" element={<ComplaintDetailsPage />} />
-              <Route path="notifications" element={<NotificationsPage />} />
+              
+              {/* <Route path="notifications" element={<NotificationsPage />} /> */}
               
               {/* Admin only routes */}
               <Route path="Department" element={
@@ -64,4 +65,4 @@ export default function App() {
       </AuthProvider>
     </BrowserRouter>
   )
-}
+} 
