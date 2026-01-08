@@ -1,0 +1,5 @@
+.sidebar{width:260px;background:#0f172a;color:#fff;display:flex;flex-direction:column;padding:16px;}
+.sidebar .brand{font-weight:700;margin-bottom:16px;}
+.sidebar nav{display:flex;flex-direction:column;gap:8px}
+.sidebar a{color:#cbd5e1;text-decoration:none;padding:8px 12px;border-radius:8px}
+.sidebar a.active{background:#1f2937;color:#fff}

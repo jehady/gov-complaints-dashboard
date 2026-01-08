@@ -1,0 +1,6 @@
+.toaster{position:fixed;top:12px;left:12px;display:flex;flex-direction:column;gap:8px;z-index:9999}
+.toast{background:#0f172a;border:1px solid #1f2937;color:#e5e7eb;padding:10px 12px;border-radius:10px;min-width:220px;box-shadow:0 4px 24px rgba(0,0,0,0.35)}
+.toast.info{border-color:#3b82f6}
+.toast.success{border-color:#10b981}
+.toast.warning{border-color:#f59e0b;color:#111}
+.toast.error{border-color:#ef4444}

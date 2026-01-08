@@ -1,0 +1,4 @@
+.topbar{height:56px;display:flex;align-items:center;justify-content:space-between;background:#111827;color:#fff;padding:0 16px;border-bottom:1px solid #1f2937}
+.topbar .title{font-weight:600}
+.topbar .right{display:flex;align-items:center;gap:12px}
+.topbar .logout{background:#ef4444;border:none;color:#fff;padding:6px 10px;border-radius:6px;cursor:pointer}
