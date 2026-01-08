@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useAuth } from "../context/AuthContext";
-import { getDepartments } from "../services/departmentService";
+import { getDepartments } from "../services/DepartmentService";
 import { getEmployees } from "../services/employeeService";
 import { fetchComplaints } from "../services/complaintsService";
 
