@@ -1,22 +1,35 @@
 import axios from "axios";
 import { authHeaders } from "../Api/api";
 
-const API_ADMIN_LIST = "http://127.0.0.1:8000/api/admin/complaints";
+const API_ADMIN_LIST = "http://127.0.0.1:8000/api/view_complaints";
 const API_DETAILS = "http://127.0.0.1:8000/api/complaints";
 
-export async function fetchComplaints() {
-  const res = await axios.get(API_ADMIN_LIST, authHeaders());
+export async function fetchComplaints(page = 1) {
+  const res = await axios.get(
+    `${API_ADMIN_LIST}?page=${page}`,
+    authHeaders()
+  );
 
-  return res.data.data.complaints.map(c => ({
+  const payload = res.data.data;
+
+  const complaints = payload.data.map(c => ({
     id: c.id,
     title: c.title?.replace(/"/g, ""),
-    status_id: c.status_id,
-    department_id: c.department_id,
+    status: c.status?.name,
+    department: c.department?.name,
     locked_by: c.locked_by,
     locked_at: c.locked_at,
     isLocked: !!c.locked_by
   }));
+
+  const totalPages = Math.ceil(payload.total / payload.per_page);
+
+  return {
+    complaints,
+    totalPages
+  };
 }
+
 
 export async function updateComplaintStatus(id, status_id) {
   await axios.post(
